@@ -98,11 +98,11 @@ export default function Gallery() {
   const next = () => setActive((i) => (i === images.length - 1 ? 0 : i + 1));
 
   return (
-    <div style={{ background: "#f0ebe4", minHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "center" }}>
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
       <div style={{ width: "100%", }}>
 
         {/* Main image */}
-        <div style={{ position: "relative", width: "100%", aspectRatio: "4/3", background: "#f0ebe4", borderRadius: 12, overflow: "hidden" }}>
+        <div style={{ position: "relative", width: "100%", aspectRatio: "4/3", borderRadius: 12, overflow: "hidden" }}>
           <img key={active} src={images[active]} alt={`Product view ${active + 1}`} style={{ width: "100%", height: "100%", objectFit: "contain", display: "block" }} />
 
           {/* Slide counter */}

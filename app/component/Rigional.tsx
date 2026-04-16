@@ -70,30 +70,32 @@ export default function RegionalReviewsReplica() {
           font-family: "Trebuchet MS", "Gill Sans", Arial, sans-serif;
           -webkit-font-smoothing: antialiased;
           text-rendering: geometricPrecision;
+          padding: 20px;
         }
 
         .review-frame {
           position: relative;
-          width: 1024px;
-          height: 288px;
+          max-width: 1024px;
+          width: 100%;
+          min-height: 288px;
           background: #ffffff;
           overflow: hidden;
+          margin: 0 auto;
         }
 
         .top-rule {
           position: absolute;
           left: 10px;
           top: 27px;
-          width: 1012px;
+          right: 10px;
           height: 1px;
           background: #202020;
         }
 
         h1 {
-          position: absolute;
-          left: 18px;
-          top: 38px;
-          margin: 0;
+          position: relative;
+          margin: 0 0 20px 0;
+          padding: 20px 0 0 8px;
           font-size: 13px;
           line-height: 13px;
           font-weight: 700;
@@ -102,15 +104,14 @@ export default function RegionalReviewsReplica() {
         }
 
         .review-content {
-          position: absolute;
-          left: 27px;
-          top: 90px;
           display: flex;
-          gap: 37px;
+          flex-direction: column;
+          gap: 20px;
+          padding: 0 8px;
         }
 
         .review-copy {
-          width: 602px;
+          width: 100%;
         }
 
         .stars {
@@ -151,13 +152,13 @@ export default function RegionalReviewsReplica() {
 
         .body-copy {
           margin: 0 0 13px 0;
-          width: 600px;
+          width: 100%;
           font-size: 11px;
           line-height: 13px;
           font-weight: 400;
           letter-spacing: .18px;
           color: #252525;
-          white-space: nowrap;
+          white-space: normal;
         }
 
         .question {
@@ -203,10 +204,8 @@ export default function RegionalReviewsReplica() {
         }
 
         .ratings-panel {
-          width: 341px;
-          height: 159px;
-          margin-top: -6px;
-          padding: 17px 21px 0 20px;
+          width: 100%;
+          padding: 17px 20px;
           background: #fbfbfb;
           box-sizing: border-box;
         }
@@ -232,9 +231,10 @@ export default function RegionalReviewsReplica() {
 
         .metric-bars {
           display: grid;
-          grid-template-columns: repeat(5, 52px);
+          grid-template-columns: repeat(5, 1fr);
           gap: 2px;
           height: 9px;
+          flex: 1;
         }
 
         .metric-bars span {
@@ -254,10 +254,9 @@ export default function RegionalReviewsReplica() {
         }
 
         .chat-button {
-          position: absolute;
-          left: 723px;
-          top: 239px;
-          width: 229px;
+          position: relative;
+          width: 100%;
+          max-width: 229px;
           height: 37px;
           border: 0;
           border-radius: 19px;
@@ -273,6 +272,8 @@ export default function RegionalReviewsReplica() {
           line-height: 13px;
           font-weight: 700;
           letter-spacing: .6px;
+          margin: 20px auto;
+          cursor: pointer;
         }
 
         .chat-button svg {
@@ -283,9 +284,9 @@ export default function RegionalReviewsReplica() {
         }
 
         .scroll-top {
-          position: absolute;
-          left: 981px;
-          top: 235px;
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
           width: 43px;
           height: 43px;
           border: 0;
@@ -298,6 +299,65 @@ export default function RegionalReviewsReplica() {
           font-weight: 700;
           text-align: center;
           padding: 1px 0 0 0;
+          cursor: pointer;
+          z-index: 1000;
+        }
+
+        @media (min-width: 768px) {
+          .review-page {
+            padding: 40px;
+          }
+
+          .review-content {
+            flex-direction: row;
+            gap: 37px;
+            padding: 0 27px;
+          }
+
+          .review-copy {
+            width: 602px;
+          }
+
+          .body-copy {
+            white-space: nowrap;
+          }
+
+          .ratings-panel {
+            width: 341px;
+            height: 159px;
+            margin-top: -6px;
+            padding: 17px 21px 0 20px;
+          }
+
+          .chat-button {
+            position: absolute;
+            left: 723px;
+            top: 239px;
+            width: 229px;
+            margin: 0;
+          }
+
+          .scroll-top {
+            position: absolute;
+            left: 981px;
+            top: 235px;
+            bottom: auto;
+            right: auto;
+          }
+
+          h1 {
+            position: absolute;
+            left: 18px;
+            top: 38px;
+            padding: 0;
+          }
+
+          .top-rule {
+            left: 10px;
+            top: 27px;
+            width: 1012px;
+            right: auto;
+          }
         }
       `}</style>
     </main>

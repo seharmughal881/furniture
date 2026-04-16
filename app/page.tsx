@@ -66,60 +66,27 @@ export default function Home() {
      
 <Header/>
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto bg-white">
+      <main className="max-w-7xl mx-auto bg-white px-4 sm:px-6 lg:px-8">
         {/* Product Section */}
-        <section className="flex flex-col lg:flex-row gap-8 p-6">
-          {/* <div className="flex-1">
-            <div className="w-full h-96 bg-gray-100 rounded-lg mb-4 overflow-hidden">
-              <Image
-                src={mainImages[selectedThumbnail]}
-                alt="Mattress Main Image"
-                width={600}
-                height={400}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="flex space-x-2">
-              {thumbnails.map((thumb, index) => (
-                <div
-                  key={index}
-                  onClick={() => handleThumbnailClick(index)}
-                  className={`w-16 h-16 bg-gray-100 rounded cursor-pointer border-2 transition-colors ${
-                    selectedThumbnail === index ? 'border-blue-500' : 'border-transparent'
-                  }`}
-                >
-                  <Image
-                    src={thumb}
-                    alt={`Thumbnail ${index + 1}`}
-                    width={64}
-                    height={64}
-                    className="w-full h-full object-cover rounded"
-                  />
-                </div>
-              ))}
-            </div>
-          </div> */}
-          <div className=''>
+        <section className="flex flex-col lg:flex-row gap-4 lg:gap-8 p-4 lg:p-6 relative">
+          {/* Gallery Section */}
+          <div className="w-full lg:w-3/5 xl:w-1/2 lg:sticky lg:top-6 lg:self-start">
                    <Gallery/>
-
           </div>
-          <div className="flex-1">
-                            {/* <h1 style={{ color: '#444444', fontFamily: 'Gilroy,serif',fontSize:"40px" }}>Kingsdown Studio Caresa Mattress</h1> */}
-
+          
+          {/* Product Details Section */}
+          <div className="w-full lg:w-1/2 xl:w-3/5">
             {/* Rating and Reviews */}
-            <div className="flex items-center space-x-2 mb-3">
-
-
-              <div className="text-yellow-400 text-sm" style={{ fontFamily: 'Arial, sans-serif',display:"flex" }}>
-                           {/* <h1 style={{ color: '#444444', fontFamily: 'Gilroy,serif',fontSize:"40px" }}>Kingsdown Studio Caresa Mattress</h1> */}
-
+            <div className="flex items-center space-x-2 mb-4 lg:mb-6">
+              <div className="flex items-center" style={{ fontFamily: 'Arial, sans-serif' }}>
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
-                  width="24" 
-                  height="24" 
+                  width={window.innerWidth < 768 ? "20" : "24"} 
+                  height={window.innerWidth < 768 ? "20" : "24"} 
                   viewBox="0 0 25 25" 
                   aria-hidden="true" 
                   focusable="false"
+                  className="flex-shrink-0"
                 >
                   <defs>
                     <linearGradient id="bv_rating_summary_star_filled_2_4_46.15_02633M" x1="99.99%" y1="0%" x2="100%" y2="0%">
@@ -133,51 +100,14 @@ export default function Home() {
                   />
                   <path d="" style={{ fill: 'url(#bv_rating_summary_star_filled_2_4_46.15_02633M)' }} />
                 </svg>
-                 <svg 
+                <svg 
                   xmlns="http://www.w3.org/2000/svg" 
-                  width="24" 
-                  height="24" 
+                  width={window.innerWidth < 768 ? "20" : "24"} 
+                  height={window.innerWidth < 768 ? "20" : "24"} 
                   viewBox="0 0 25 25" 
                   aria-hidden="true" 
                   focusable="false"
-                >
-                  <defs>
-                    <linearGradient id="bv_rating_summary_star_filled_2_1_99.99_02633M" x1="99.99%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" style={{ stopColor: 'rgb(208, 168, 109)', stopOpacity: 1 }} />
-                      <stop offset="1%" style={{ stopColor: 'rgb(232, 232, 234)', stopOpacity: 1 }} />
-                    </linearGradient>
-                  </defs>
-                  <polygon 
-                    points="25 9.12 15.5669599 9.12 12.512219 0 9.40860215 9.12 0 9.12 7.55131965 14.856 4.47214076 24 12.512219 18.216 20.5522972 24 17.4731183 14.856" 
-                    style={{ fill: 'url(#bv_rating_summary_star_filled_2_1_99.99_02633M)' }}
-                  />
-                  <path d="" style={{ fill: 'url(#bv_rating_summary_star_filled_2_1_99.99_02633M)' }} />
-                </svg> <svg 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  width="24" 
-                  height="24" 
-                  viewBox="0 0 25 25" 
-                  aria-hidden="true" 
-                  focusable="false"
-                >
-                  <defs>
-                    <linearGradient id="bv_rating_summary_star_filled_2_1_99.99_02633M" x1="99.99%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" style={{ stopColor: 'rgb(208, 168, 109)', stopOpacity: 1 }} />
-                      <stop offset="1%" style={{ stopColor: 'rgb(232, 232, 234)', stopOpacity: 1 }} />
-                    </linearGradient>
-                  </defs>
-                  <polygon 
-                    points="25 9.12 15.5669599 9.12 12.512219 0 9.40860215 9.12 0 9.12 7.55131965 14.856 4.47214076 24 12.512219 18.216 20.5522972 24 17.4731183 14.856" 
-                    style={{ fill: 'url(#bv_rating_summary_star_filled_2_1_99.99_02633M)' }}
-                  />
-                  <path d="" style={{ fill: 'url(#bv_rating_summary_star_filled_2_1_99.99_02633M)' }} />
-                </svg> <svg 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  width="24" 
-                  height="24" 
-                  viewBox="0 0 25 25" 
-                  aria-hidden="true" 
-                  focusable="false"
+                  className="flex-shrink-0"
                 >
                   <defs>
                     <linearGradient id="bv_rating_summary_star_filled_2_1_99.99_02633M" x1="99.99%" y1="0%" x2="100%" y2="0%">
@@ -191,18 +121,79 @@ export default function Home() {
                   />
                   <path d="" style={{ fill: 'url(#bv_rating_summary_star_filled_2_1_99.99_02633M)' }} />
                 </svg>
-    <polygon 
-  points="25 9.12 15.5669599 9.12 12.512219 0 9.40860215 9.12 0 9.12 7.55131965 14.856 4.47214076 24 12.512219 18.216 20.5522972 24 17.4731183 14.856" 
-  style={{ fill: 'url(#bv_rating_summary_star_filled_2_4_46.15_02633M)' }}
-/>
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width={window.innerWidth < 768 ? "20" : "24"} 
+                  height={window.innerWidth < 768 ? "20" : "24"} 
+                  viewBox="0 0 25 25" 
+                  aria-hidden="true" 
+                  focusable="false"
+                  className="flex-shrink-0"
+                >
+                  <defs>
+                    <linearGradient id="bv_rating_summary_star_filled_2_1_99.99_02633M" x1="99.99%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" style={{ stopColor: 'rgb(208, 168, 109)', stopOpacity: 1 }} />
+                      <stop offset="1%" style={{ stopColor: 'rgb(232, 232, 234)', stopOpacity: 1 }} />
+                    </linearGradient>
+                  </defs>
+                  <polygon 
+                    points="25 9.12 15.5669599 9.12 12.512219 0 9.40860215 9.12 0 9.12 7.55131965 14.856 4.47214076 24 12.512219 18.216 20.5522972 24 17.4731183 14.856" 
+                    style={{ fill: 'url(#bv_rating_summary_star_filled_2_1_99.99_02633M)' }}
+                  />
+                  <path d="" style={{ fill: 'url(#bv_rating_summary_star_filled_2_1_99.99_02633M)' }} />
+                </svg>
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width={window.innerWidth < 768 ? "20" : "24"} 
+                  height={window.innerWidth < 768 ? "20" : "24"} 
+                  viewBox="0 0 25 25" 
+                  aria-hidden="true" 
+                  focusable="false"
+                  className="flex-shrink-0"
+                >
+                  <defs>
+                    <linearGradient id="bv_rating_summary_star_filled_2_1_99.99_02633M" x1="99.99%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" style={{ stopColor: 'rgb(208, 168, 109)', stopOpacity: 1 }} />
+                      <stop offset="1%" style={{ stopColor: 'rgb(232, 232, 234)', stopOpacity: 1 }} />
+                    </linearGradient>
+                  </defs>
+                  <polygon 
+                    points="25 9.12 15.5669599 9.12 12.512219 0 9.40860215 9.12 0 9.12 7.55131965 14.856 4.47214076 24 12.512219 18.216 20.5522972 24 17.4731183 14.856" 
+                    style={{ fill: 'url(#bv_rating_summary_star_filled_2_1_99.99_02633M)' }}
+                  />
+                  <path d="" style={{ fill: 'url(#bv_rating_summary_star_filled_2_1_99.99_02633M)' }} />
+                </svg>
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width={window.innerWidth < 768 ? "20" : "24"} 
+                  height={window.innerWidth < 768 ? "20" : "24"} 
+                  viewBox="0 0 25 25" 
+                  aria-hidden="true" 
+                  focusable="false"
+                  className="flex-shrink-0"
+                >
+                  <defs>
+                    <linearGradient id="bv_rating_summary_star_filled_2_4_46.15_02633M" x1="99.99%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" style={{ stopColor: 'rgb(208, 168, 109)', stopOpacity: 1 }} />
+                      <stop offset="1%" style={{ stopColor: 'rgb(232, 232, 234)', stopOpacity: 1 }} />
+                    </linearGradient>
+                  </defs>
+                  <polygon 
+                    points="25 9.12 15.5669599 9.12 12.512219 0 9.40860215 9.12 0 9.12 7.55131965 14.856 4.47214076 24 12.512219 18.216 20.5522972 24 17.4731183 14.856" 
+                    style={{ fill: 'url(#bv_rating_summary_star_filled_2_4_46.15_02633M)' }}
+                  />
+                  <path d="" style={{ fill: 'url(#bv_rating_summary_star_filled_2_4_46.15_02633M)' }} />
+                </svg>
               </div>
-              <span className="text-gray-600 text-sm" style={{ fontFamily: 'Arial, sans-serif' }}>(156)</span>
+              <span className="text-gray-600 text-sm lg:text-base" style={{ fontFamily: 'Arial, sans-serif' }}>(156)</span>
             </div>
-            {/* Chat with Expert Button */}
-                        <ProductPage/>
-                        <ProductOverview/>
-                        <ProductDetail/>
-
+            
+            {/* Product Components */}
+            <div className="space-y-4 lg:space-y-6">
+              <ProductPage/>
+              <ProductOverview/>
+              <ProductDetail/>
+            </div>
           </div>
         </section>
         <section>

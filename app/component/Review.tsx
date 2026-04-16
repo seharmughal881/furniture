@@ -56,8 +56,10 @@ export default function Reviews() {
       style={{
         backgroundColor: "#FBFBF9",
         minHeight: "100vh",
-        fontFamily: "'Times New Roman', Times, serif",
+        fontFamily: "Gilroy, sans-serif",
         color: "#2d2d2d",
+        fontSize: "16px",
+        marginLeft: "40px",
       }}
     >
       <div
@@ -69,10 +71,10 @@ export default function Reviews() {
       >
         <h2
           style={{
-            fontSize: 22,
+            fontSize: 16,
             fontWeight: "bold",
             marginBottom: 20,
-            fontFamily: "'Times New Roman', Times, serif",
+            fontFamily: "Gilroy, sans-serif",
             letterSpacing: 0,
           }}
         >
@@ -314,6 +316,14 @@ export default function Reviews() {
           </p>
         </div>
       </div>
+
+
+
+
+      
     </div>
   );
 }
+
+
+

@@ -1,7 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function SleepCountryHeader() {
   const [searchValue, setSearchValue] = useState("");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768 && isMobileMenuOpen) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [isMobileMenuOpen]);
 
   return (
     <div style={{ fontFamily: "Arial, Helvetica, sans-serif", backgroundColor: "#fff" }}>
@@ -17,16 +30,41 @@ export default function SleepCountryHeader() {
           fontSize: "12px",
           fontWeight: 400,
           minHeight: "32px",
+          flexWrap: "wrap",
         }}
       >
-        <span style={{ flex: 1, textAlign: "left" }}>
+        <span style={{ flex: 1, textAlign: "left", display: window.innerWidth < 768 ? "none" : "block" }}>
           Sleep Easy with up to 20% off mattresses &amp; more!*
         </span>
-        <div style={{ display: "flex", alignItems: "center", gap: "24px", color: "#fff" }}>
-          <a href="#" style={{ color: "#fff", textDecoration: "none", fontSize: "12px", whiteSpace: "nowrap" }}>
+        <div style={{ 
+          display: "flex", 
+          alignItems: "center", 
+          gap: window.innerWidth < 768 ? "12px" : "24px", 
+          color: "#fff",
+          flexWrap: "wrap"
+        }}>
+          <a 
+            href="#" 
+            style={{ 
+              color: "#fff", 
+              textDecoration: "none", 
+              fontSize: "12px", 
+              whiteSpace: "nowrap",
+              display: window.innerWidth < 480 ? "none" : "block"
+            }}
+          >
             Have Questions?
           </a>
-          <a href="#" style={{ color: "#fff", textDecoration: "none", fontSize: "12px", whiteSpace: "nowrap" }}>
+          <a 
+            href="#" 
+            style={{ 
+              color: "#fff", 
+              textDecoration: "none", 
+              fontSize: "12px", 
+              whiteSpace: "nowrap",
+              display: window.innerWidth < 480 ? "none" : "block"
+            }}
+          >
             Track My Order
           </a>
           <div style={{ display: "flex", alignItems: "center", gap: "4px", cursor: "pointer" }}>
