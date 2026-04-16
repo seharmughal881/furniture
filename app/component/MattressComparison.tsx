@@ -1,0 +1,476 @@
+// import { Heart, Flame, MessageCircle, ChevronUp } from "lucide-react";
+
+// interface Product {
+//   id: number;
+//   name: string;
+//   priceWhole: string;
+//   priceCents: string;
+//   wasPrice?: string;
+//   isHotPrice?: boolean;
+//   isCurrentItem?: boolean;
+//   imageSrc: string;
+//   showPrice: boolean;
+// }       
+
+// const products: Product[] = [
+//   {
+//     id: 1,
+//     name: "Kingsdown Studio Caresa Mattress",
+//     priceWhole: "1,299",
+//     priceCents: "00",
+//     wasPrice: "$1,849.00",
+//     isHotPrice: true,
+//     isCurrentItem: true,
+//     showPrice: true,
+//     imageSrc: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=300&h=200&fit=crop&auto=format",
+//   },
+//   {
+//     id: 2,
+//     name: "Distinction Series Miramichi...",
+//     priceWhole: "999",
+//     priceCents: "00",
+//     isHotPrice: false,
+//     isCurrentItem: false,
+//     showPrice: true,
+//     imageSrc: "https://images.unsplash.com/photo-1586105251261-72a756497a11?w=300&h=200&fit=crop&auto=format",
+//   },
+//   {
+//     id: 3,
+//     name: "Chiropractic C3 Hybrid LP...",
+//     priceWhole: "1,599",
+//     priceCents: "00",
+//     isHotPrice: false,
+//     isCurrentItem: false,
+//     showPrice: true,
+//     imageSrc: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=300&h=200&fit=crop&auto=format",
+//   },
+//   {
+//     id: 4,
+//     name: "Serta® Perfect Sleeper® Elite...",
+//     priceWhole: "2,099",
+//     priceCents: "00",
+//     isHotPrice: false,
+//     isCurrentItem: false,
+//     showPrice: true,
+//     imageSrc: "https://images.unsplash.com/photo-1615874694520-474822394e73?w=300&h=200&fit=crop&auto=format",
+//   },
+//   {
+//     id: 5,
+//     name: "Kingsdown Silent Partner X3 Mattress",
+//     priceWhole: "$2,1...",
+//     priceCents: "",
+//     wasPrice: "$2,999.00",
+//     isHotPrice: true,
+//     isCurrentItem: false,
+//     showPrice: true,
+//     imageSrc: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=300&h=200&fit=crop&auto=format",
+//   },
+//   {
+//     id: 6,
+//     name: "Kingsdown Duet Impresario...",
+//     priceWhole: "",
+//     priceCents: "",
+//     isHotPrice: false,
+//     isCurrentItem: false,
+//     showPrice: false,
+//     imageSrc: "https://images.unsplash.com/photo-1520080816260-1e90e3f9a4a4?w=300&h=200&fit=crop&auto=format",
+//   },
+// ];
+
+// const BLANK_IMAGE =
+//   "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='160' viewBox='0 0 200 160'%3E%3Crect fill='%23e5ddd0' width='200' height='160'/%3E%3C/svg%3E";
+
+// function ProductCard({ product }: { product: Product }) {
+//   return (
+//     <div style={{ display: "flex", flexDirection: "column", width: "158px", flexShrink: 0 }}>
+//       <div
+//         style={{
+//           position: "relative",
+//           backgroundColor: "#ede8e0",
+//           borderRadius: "8px",
+//           overflow: "hidden",
+//           width: "158px",
+//           height: "126px",
+//           marginBottom: "8px",
+//         }}
+//       >
+//         <img
+//           src={product.imageSrc}
+//           alt={product.name}
+//           style={{ width: "100%", height: "100%", objectFit: "cover" }}
+//           onError={(e) => { (e.target as HTMLImageElement).src = BLANK_IMAGE; }}
+//         />
+//         <button
+//           aria-label="Add to wishlist"
+//           style={{
+//             position: "absolute", top: "6px", right: "6px",
+//             background: "white", border: "none", borderRadius: "50%",
+//             width: "28px", height: "28px", display: "flex",
+//             alignItems: "center", justifyContent: "center",
+//             cursor: "pointer", boxShadow: "0 1px 3px rgba(0,0,0,0.18)", padding: 0,
+//           }}
+//         >
+//           <Heart size={14} strokeWidth={1.5} color="#888" />
+//         </button>
+//         {product.isHotPrice && (
+//           <div
+//             style={{
+//               position: "absolute", bottom: "6px", left: "6px",
+//               backgroundColor: "#cc1f1f", color: "white",
+//               fontSize: "11px", fontWeight: "700", padding: "2px 6px",
+//               borderRadius: "3px", display: "flex", alignItems: "center", gap: "3px",
+//             }}
+//           >
+//             <Flame size={11} fill="white" color="white" />
+//             Hot Price
+//           </div>
+//         )}
+//       </div>
+
+//       <div style={{ fontSize: "13px", fontWeight: "400", color: "#1a1a1a", lineHeight: "1.35", marginBottom: "6px", minHeight: "36px" }}>
+//         {product.name}
+//       </div>
+
+//       {product.isCurrentItem && (
+//         <div
+//           style={{
+//             display: "inline-flex", alignSelf: "flex-start",
+//             border: "1px solid #999", borderRadius: "4px",
+//             padding: "2px 8px", fontSize: "11px", color: "#444", marginBottom: "8px",
+//           }}
+//         >
+//           Current Item
+//         </div>
+//       )}
+
+//       <button
+//         style={{
+//           backgroundColor: "#1e2433", color: "white", border: "none",
+//           borderRadius: "5px", padding: "9px 12px", fontSize: "13px",
+//           fontWeight: "700", cursor: "pointer", width: "100%", marginBottom: "8px",
+//         }}
+//       >
+//         Add to Cart
+//       </button>
+
+//       {product.showPrice && product.priceWhole && (
+//         <div>
+//           <div style={{ display: "flex", alignItems: "flex-start" }}>
+//             <span style={{ fontSize: "11px", color: "#c0392b", fontWeight: "700", lineHeight: "1.6" }}>$</span>
+//             <span style={{ fontSize: "17px", fontWeight: "700", color: "#c0392b", lineHeight: "1.2" }}>{product.priceWhole}</span>
+//             {product.priceCents && (
+//               <span style={{ fontSize: "11px", color: "#c0392b", fontWeight: "700", lineHeight: "1.6" }}>.{product.priceCents}</span>
+//             )}
+//           </div>
+//           {product.wasPrice && (
+//             <div style={{ fontSize: "11px", color: "#888", marginTop: "1px" }}>
+//               Was <span style={{ textDecoration: "line-through" }}>{product.wasPrice}</span>
+//             </div>
+//           )}
+//         </div>
+//       )}
+//     </div>
+//   );
+// }
+
+// export default function MattressComparison() {
+//   return (
+//     <div style={{ backgroundColor: "#ece7df", minHeight: "100vh", fontFamily: "Arial, Helvetica, sans-serif", padding: "24px 24px 90px" }}>
+//       <div style={{ display: "flex", alignItems: "center", marginBottom: "18px" }}>
+//         <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+//           <span style={{ fontSize: "14px", fontWeight: "700", color: "#1a1a1a", whiteSpace: "nowrap" }}>This Item</span>
+//           <div style={{ height: "1px", width: "60px", backgroundColor: "#bbb" }} />
+//         </div>
+//         <div style={{ display: "flex", alignItems: "center", gap: "10px", marginLeft: "24px" }}>
+//           <span style={{ fontSize: "14px", fontWeight: "700", color: "#1a1a1a", whiteSpace: "nowrap" }}>Similar Products</span>
+//           <div style={{ height: "1px", width: "200px", backgroundColor: "#bbb" }} />
+//         </div>
+//       </div>
+
+//       <div style={{ display: "flex", gap: "16px", overflowX: "auto", paddingBottom: "4px" }}>
+//         {products.map((product) => <ProductCard key={product.id} product={product} />)}
+//       </div>
+
+//       <div style={{ marginTop: "6px", fontSize: "13px", color: "#555" }}>Price</div>
+
+//       <div
+//         style={{
+//           position: "fixed", bottom: "20px", right: "64px",
+//           backgroundColor: "#1e2433", color: "white", borderRadius: "30px",
+//           padding: "12px 20px", display: "flex", alignItems: "center", gap: "10px",
+//           fontSize: "14px", fontWeight: "700", cursor: "pointer",
+//           boxShadow: "0 4px 14px rgba(0,0,0,0.3)", userSelect: "none",
+//         }}
+//       >
+//         <MessageCircle size={18} />
+//         Chat with a Sleep Expert
+//       </div>
+
+//       <button
+//         style={{
+//           position: "fixed", bottom: "20px", right: "20px",
+//           backgroundColor: "#666", color: "white", borderRadius: "50%",
+//           width: "38px", height: "38px", display: "flex",
+//           alignItems: "center", justifyContent: "center",
+//           border: "none", cursor: "pointer", boxShadow: "0 2px 8px rgba(0,0,0,0.25)",
+//         }}
+//         aria-label="Scroll to top"
+//       >
+//         <ChevronUp size={18} />
+//       </button>
+//     </div>
+//   );
+// }
+
+
+import { Heart, Flame, MessageCircle, ChevronUp, ChevronDown, Check } from "lucide-react";
+
+const BLANK_IMAGE =
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='160' viewBox='0 0 200 160'%3E%3Crect fill='%23e5ddd0' width='200' height='160'/%3E%3C/svg%3E";
+
+const products = [
+  {
+    id: 1,
+    name: "Kingsdown Studio Caresa Mattress",
+    isCurrentItem: true,
+    isHotPrice: true,
+    imageSrc: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=300&h=200&fit=crop&auto=format",
+    price: "$1,299", cents: ".00", wasPrice: "$1,849.00",
+    rating: 4.5, reviewCount: 156, hasDropdown: true,
+    size: "Queen", firmness: "Plush", compositionType: "Innerspring",
+    thickness: '13.5"', hasCooling: false,
+  },
+  {
+    id: 2,
+    name: "Distinction Series Miramichi...",
+    isCurrentItem: false,
+    isHotPrice: false,
+    imageSrc: "https://images.unsplash.com/photo-1586105251261-72a756497a11?w=300&h=200&fit=crop&auto=format",
+    price: "$999", cents: ".00", wasPrice: null,
+    rating: 3.7, reviewCount: 6, hasDropdown: false,
+    size: "Queen", firmness: "Plush", compositionType: "Innerspring",
+    thickness: '12.5"', hasCooling: false,
+  },
+  {
+    id: 3,
+    name: "Chiropractic C3 Hybrid LP...",
+    isCurrentItem: false,
+    isHotPrice: false,
+    imageSrc: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=300&h=200&fit=crop&auto=format",
+    price: "$1,599", cents: ".00", wasPrice: null,
+    rating: 0.0, reviewCount: 0, hasDropdown: false,
+    size: "Queen", firmness: "Plush", compositionType: "Innerspring",
+    thickness: '11"', hasCooling: true,
+  },
+  {
+    id: 4,
+    name: "Serta® Perfect Sleeper® Elite...",
+    isCurrentItem: false,
+    isHotPrice: false,
+    imageSrc: "https://images.unsplash.com/photo-1615874694520-474822394e73?w=300&h=200&fit=crop&auto=format",
+    price: "$2,099", cents: ".00", wasPrice: null,
+    rating: 4.5, reviewCount: 81, hasDropdown: true,
+    size: "Queen", firmness: "Plush", compositionType: "Innerspring",
+    thickness: '13.5"', hasCooling: false,
+  },
+  {
+    id: 5,
+    name: "Kingsdown Silent Partner X3 Mattress",
+    isCurrentItem: false,
+    isHotPrice: true,
+    imageSrc: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=300&h=200&fit=crop&auto=format",
+    price: "$2,199", cents: ".00", wasPrice: "$2,999.00",
+    rating: 4.3, reviewCount: 106, hasDropdown: true,
+    size: "Queen", firmness: "Plush", compositionType: "Innerspring",
+    thickness: '12"', hasCooling: false,
+  },
+  {
+    id: 6,
+    name: "Kingsdown Duet Impresario...",
+    isCurrentItem: false,
+    isHotPrice: false,
+    imageSrc: "https://images.unsplash.com/photo-1520080816260-1e90e3f9a4a4?w=300&h=200&fit=crop&auto=format",
+    price: "$4,999", cents: ".00", wasPrice: null,
+    rating: 4.2, reviewCount: 72, hasDropdown: true,
+    size: "Queen", firmness: "Plush", compositionType: "Innerspring",
+    thickness: '15.5"', hasCooling: false,
+  },
+];
+
+const rows = [
+  { label: "Price", key: "price" },
+  { label: "Reviews", key: "reviews" },
+  { label: "Size", key: "size" },
+  { label: "Firmness", key: "firmness" },
+  { label: "Composition\nType", key: "compositionType" },
+  { label: "Cooling", key: "cooling" },
+  { label: "Thickness", key: "thickness" },
+];
+
+function StarRating({ rating, hasDropdown }: { rating: number; hasDropdown: boolean }) {
+  const fullStars = Math.floor(rating);
+  const partial = rating - fullStars;
+  const emptyStars = 5 - Math.ceil(rating);
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: "2px" }}>
+      {Array.from({ length: fullStars }).map((_, i) => (
+        <svg key={`f${i}`} width="18" height="18" viewBox="0 0 20 20">
+          <polygon points="10,1 12.9,7.3 20,8.3 15,13 16.2,20 10,16.5 3.8,20 5,13 0,8.3 7.1,7.3" fill="#c9a96e" />
+        </svg>
+      ))}
+      {partial > 0 && (
+        <svg width="18" height="18" viewBox="0 0 20 20">
+          <defs>
+            <linearGradient id={`pg-${rating}`} x1="0" x2="1" y1="0" y2="0">
+              <stop offset={`${partial * 100}%`} stopColor="#c9a96e" />
+              <stop offset={`${partial * 100}%`} stopColor="#d9cfc0" />
+            </linearGradient>
+          </defs>
+          <polygon points="10,1 12.9,7.3 20,8.3 15,13 16.2,20 10,16.5 3.8,20 5,13 0,8.3 7.1,7.3" fill={`url(#pg-${rating})`} />
+        </svg>
+      )}
+      {Array.from({ length: emptyStars }).map((_, i) => (
+        <svg key={`e${i}`} width="18" height="18" viewBox="0 0 20 20">
+          <polygon points="10,1 12.9,7.3 20,8.3 15,13 16.2,20 10,16.5 3.8,20 5,13 0,8.3 7.1,7.3" fill="#d9cfc0" />
+        </svg>
+      ))}
+      {hasDropdown && <ChevronDown size={14} color="#888" style={{ marginLeft: "2px" }} />}
+    </div>
+  );
+}
+
+function ZeroStarRating() {
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: "2px" }}>
+      {Array.from({ length: 5 }).map((_, i) => (
+        <svg key={i} width="18" height="18" viewBox="0 0 20 20">
+          <polygon points="10,1 12.9,7.3 20,8.3 15,13 16.2,20 10,16.5 3.8,20 5,13 0,8.3 7.1,7.3" fill="#e8e0d5" />
+        </svg>
+      ))}
+    </div>
+  );
+}
+
+const COL_W = 158;
+const COL_GAP = 16;
+const LABEL_W = 130;
+const PAD_X = 24;
+
+export function ComparisonTable() {
+  return (
+    <div style={{ backgroundColor: "#ece7df", minHeight: "100vh", fontFamily: "Arial, Helvetica, sans-serif", paddingBottom: "100px" }}>
+
+      {/* Section header */}
+      <div style={{ padding: `20px ${PAD_X}px 10px`, display: "flex", alignItems: "center" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+          <span style={{ fontSize: "13px", fontWeight: "700", color: "#1a1a1a", whiteSpace: "nowrap" }}>This Item</span>
+          <div style={{ height: "1px", width: "50px", backgroundColor: "#bbb" }} />
+        </div>
+        <div style={{ display: "flex", alignItems: "center", gap: "10px", marginLeft: "20px" }}>
+          <span style={{ fontSize: "13px", fontWeight: "700", color: "#1a1a1a", whiteSpace: "nowrap" }}>Similar Products</span>
+          <div style={{ height: "1px", width: "220px", backgroundColor: "#bbb" }} />
+        </div>
+      </div>
+
+      {/* Scrollable layout */}
+      <div style={{ overflowX: "auto" }}>
+        <div style={{ minWidth: `${LABEL_W + (COL_W + COL_GAP) * products.length + PAD_X * 2}px`, padding: `0 ${PAD_X}px` }}>
+
+          {/* Product cards */}
+          <div style={{ display: "flex", gap: `${COL_GAP}px`, paddingLeft: `${LABEL_W}px` }}>
+            {products.map((p) => (
+              <div key={p.id} style={{ width: `${COL_W}px`, flexShrink: 0, display: "flex", flexDirection: "column" }}>
+                {/* Image */}
+                <div style={{ position: "relative", backgroundColor: "#ede8e0", borderRadius: "8px", overflow: "hidden", width: `${COL_W}px`, height: "120px", marginBottom: "8px" }}>
+                  <img
+                    src={p.imageSrc}
+                    alt={p.name}
+                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    onError={(e) => { (e.target as HTMLImageElement).src = BLANK_IMAGE; }}
+                  />
+                  <button aria-label="Wishlist" style={{ position: "absolute", top: "6px", right: "6px", background: "white", border: "none", borderRadius: "50%", width: "26px", height: "26px", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", boxShadow: "0 1px 3px rgba(0,0,0,0.18)", padding: 0 }}>
+                    <Heart size={13} strokeWidth={1.5} color="#888" />
+                  </button>
+                  {p.isHotPrice && (
+                    <div style={{ position: "absolute", bottom: "6px", left: "6px", backgroundColor: "#cc1f1f", color: "white", fontSize: "10px", fontWeight: "700", padding: "2px 5px", borderRadius: "3px", display: "flex", alignItems: "center", gap: "3px" }}>
+                      <Flame size={10} fill="white" color="white" /> Hot Price
+                    </div>
+                  )}
+                </div>
+                {/* Name */}
+                <div style={{ fontSize: "12px", color: "#1a1a1a", lineHeight: "1.35", marginBottom: "6px", minHeight: "34px" }}>{p.name}</div>
+                {/* Current Item badge */}
+                {p.isCurrentItem && (
+                  <div style={{ display: "inline-flex", alignSelf: "flex-start", border: "1px solid #999", borderRadius: "4px", padding: "2px 7px", fontSize: "10px", color: "#444", marginBottom: "7px" }}>
+                    Current Item
+                  </div>
+                )}
+                {/* Add to Cart */}
+                <button style={{ backgroundColor: "#1e2433", color: "white", border: "none", borderRadius: "5px", padding: "8px 10px", fontSize: "12px", fontWeight: "700", cursor: "pointer", width: "100%", marginBottom: "7px" }}>
+                  Add to Cart
+                </button>
+              </div>
+            ))}
+          </div>
+
+          {/* Comparison rows */}
+          {rows.map((row) => (
+            <div key={row.key} style={{ display: "flex", gap: `${COL_GAP}px`, borderTop: "1px solid #d6cfc5", paddingTop: "14px", paddingBottom: "14px", alignItems: "flex-start" }}>
+              {/* Label */}
+              <div style={{ width: `${LABEL_W}px`, flexShrink: 0, fontSize: "13px", color: "#5a5248", whiteSpace: "pre-line", lineHeight: "1.4", paddingTop: "2px", fontFamily: "Georgia, serif" }}>
+                {row.label}
+              </div>
+              {/* Cells */}
+              {products.map((p, ci) => (
+                <div key={ci} style={{ width: `${COL_W}px`, flexShrink: 0, fontSize: "14px", color: "#3d3530", fontFamily: "sans-serif" }}>
+                  {row.key === "price" && (
+                    <div>
+                      <div style={{ color: "#c0392b" }}>
+                        <span style={{ fontWeight: "700", fontSize: "15px" }}>{p.price}</span>
+                        <sup style={{ fontSize: "10px" }}>{p.cents}</sup>
+                      </div>
+                      {p.wasPrice && (
+                        <div style={{ fontSize: "11px", color: "#888", marginTop: "2px" }}>
+                          Was <span style={{ textDecoration: "line-through" }}>{p.wasPrice}</span>
+                        </div>
+                      )}
+                    </div>
+                  )}
+                  {row.key === "reviews" && (
+                    <div>
+                      {p.rating === 0 ? <ZeroStarRating /> : <StarRating rating={p.rating} hasDropdown={p.hasDropdown} />}
+                      <div style={{ fontSize: "12px", color: "#5a5248", marginTop: "3px" }}>
+                        {p.rating.toFixed(1)} ({p.reviewCount})
+                      </div>
+                    </div>
+                  )}
+                  {row.key === "size" && <span>{p.size}</span>}
+                  {row.key === "firmness" && <span>{p.firmness}</span>}
+                  {row.key === "compositionType" && <span>{p.compositionType}</span>}
+                  {row.key === "cooling" && (
+                    p.hasCooling
+                      ? <Check size={16} color="#555" strokeWidth={2.5} />
+                      : <span style={{ color: "#aaa", fontSize: "16px" }}>–</span>
+                  )}
+                  {row.key === "thickness" && <span>{p.thickness}</span>}
+                </div>
+              ))}
+            </div>
+          ))}
+
+        </div>
+      </div>
+
+      {/* Floating: Chat with a Sleep Expert */}
+      <div style={{ position: "fixed", bottom: "20px", right: "64px", backgroundColor: "#1e2433", color: "white", borderRadius: "30px", padding: "12px 20px", display: "flex", alignItems: "center", gap: "10px", fontSize: "14px", fontWeight: "700", cursor: "pointer", boxShadow: "0 4px 14px rgba(0,0,0,0.3)" }}>
+        <MessageCircle size={18} />
+        Chat with a Sleep Expert
+      </div>
+
+      {/* Floating: Scroll to top */}
+      <button style={{ position: "fixed", bottom: "20px", right: "20px", backgroundColor: "#666", color: "white", borderRadius: "50%", width: "38px", height: "38px", display: "flex", alignItems: "center", justifyContent: "center", border: "none", cursor: "pointer", boxShadow: "0 2px 8px rgba(0,0,0,0.25)" }} aria-label="Scroll to top">
+        <ChevronUp size={18} />
+      </button>
+    </div>
+  );
+}
