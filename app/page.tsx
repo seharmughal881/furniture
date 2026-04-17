@@ -80,7 +80,7 @@ export default function Home() {
       {/* Main Content */}
       <main className="w-full bg-white">
         {/* Product Section */}
-        <section className="flex flex-col lg:flex-row gap-4 lg:gap-8 relative px-4 sm:px-6 lg:px-8">
+        <section className="flex flex-col lg:flex-row gap-6 lg:gap-12 relative px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
           {/* Gallery Section */}
           <div className="w-full lg:w-3/5 xl:w-1/2 lg:sticky lg:top-6 lg:self-start">
                    <Gallery/>
@@ -89,8 +89,8 @@ export default function Home() {
           {/* Product Details Section */}
           <div className="w-full lg:w-1/2 xl:w-3/5">
             {/* Rating and Reviews */}
-            <div className="flex items-center space-x-2 mb-4 lg:mb-6">
-              <div className="flex items-center" style={{ fontFamily: 'Arial, sans-serif' }}>
+            <div className="flex items-center space-x-3 mb-6 lg:mb-8">
+              <div className="flex items-center" style={{ fontFamily: 'Gilroy, sans-serif' }}>
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
                   width={isMobile ? "20" : "24"} 
@@ -197,24 +197,28 @@ export default function Home() {
                   <path d="" style={{ fill: 'url(#bv_rating_summary_star_filled_2_4_46.15_02633M)' }} />
                 </svg>
               </div>
-              <span className="text-gray-600 text-sm lg:text-base" style={{ fontFamily: 'Arial, sans-serif' }}>(156)</span>
+              <span className="text-gray-600 text-sm lg:text-base font-medium" style={{ fontFamily: 'Gilroy, sans-serif' }}>(156)</span>
             </div>
             
             {/* Product Components */}
-            <div className="space-y-4 lg:space-y-6">
+            <div className="space-y-6 lg:space-y-8">
               <ProductPage/>
               {/* <ProductOverview/> */}
               <ProductDetail/>
             </div>
           </div>
         </section>
-        <section>
+        <section className="py-12 lg:py-16">
           {/* <MattressComparison/> */}
-          <br /> <br /> <br />
-          <ComparisonTable/>
-          <br /><br /><br />
-          <Review/>
-          <Rigional/>
+          <div className="mb-12 lg:mb-16">
+            <ComparisonTable/>
+          </div>
+          <div className="mb-12 lg:mb-16">
+            <Review/>
+          </div>
+          <div className="mb-12 lg:mb-16">
+            <Rigional/>
+          </div>
           <Footer/>
         </section>
       </main>
@@ -223,10 +227,10 @@ export default function Home() {
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors"
-          style={{ fontFamily: 'Arial, sans-serif' }}
+          className="fixed bottom-8 right-8 bg-gray-800 hover:bg-gray-900 text-white p-4 rounded-full shadow-xl transition-all duration-300 hover:scale-110 z-50"
+          style={{ fontFamily: 'Gilroy, sans-serif' }}
         >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
           </svg>
         </button>
