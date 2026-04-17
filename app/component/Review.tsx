@@ -54,8 +54,8 @@ export default function Reviews() {
   return (
     <div
       style={{
-        backgroundColor: "#FBFBF9",
-        minHeight: "100vh",
+        // backgroundColor: "#FBFBF9",
+        // minHeight: "100vh",
         fontFamily: "Gilroy, sans-serif",
         color: "#2d2d2d",
         fontSize: "16px",

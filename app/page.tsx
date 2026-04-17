@@ -213,9 +213,10 @@ export default function Home() {
           {/* <MattressComparison/> */}
           <br /> <br /> <br />
           <ComparisonTable/>
+          <br /><br /><br />
           <Review/>
           <Rigional/>
-          <Footer/>
+          {/* <Footer/> */}
         </section>
       </main>
 
