@@ -3,9 +3,8 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import ProductPage from './component/ProductPage';
-import ProductOverview from './component/ProductOverview';
+// import ProductOverview from './component/ProductOverview';
 import ProductDetail from './component/ProductDetail';
-// import MattressComparison from './component/MattressComparison';
 // import { Cart } from './component/Cart';
 import { ComparisonTable } from './component/ComparisonTable';
 import Header from './component/Header';
@@ -204,7 +203,7 @@ export default function Home() {
             {/* Product Components */}
             <div className="space-y-4 lg:space-y-6">
               <ProductPage/>
-              <ProductOverview/>
+              {/* <ProductOverview/> */}
               <ProductDetail/>
             </div>
           </div>
@@ -216,7 +215,7 @@ export default function Home() {
           <br /><br /><br />
           <Review/>
           <Rigional/>
-          {/* <Footer/> */}
+          <Footer/>
         </section>
       </main>
 

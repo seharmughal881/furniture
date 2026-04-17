@@ -2,40 +2,40 @@
 
 export function Footer() {
   return (
-    <div style={{ fontFamily: "'Arial', 'Helvetica Neue', Helvetica, sans-serif", fontSize: "13px", color: "#1a1a1a", backgroundColor: "#f2ede7", minWidth: "1024px" }}>
+    <div style={{ fontFamily: "Gilroy, sans-serif", fontSize: "16px", color: "#1a1a1a", backgroundColor: "#f2ede7", minWidth: "1024px" }}>
 
       {/* ── Main footer columns + contact panel ── */}
       <div style={{ display: "flex", gap: "0", padding: "36px 40px 0 40px" }}>
 
         {/* Our Services */}
         <div style={{ flex: "1", minWidth: "170px", paddingRight: "20px" }}>
-          <p style={{ fontWeight: "700", fontSize: "13px", marginBottom: "14px", lineHeight: "1.4" }}>Our Services</p>
+          <p style={{ fontWeight: "700", fontSize: "18px", marginBottom: "14px", lineHeight: "1.4" }}>Our Services</p>
           <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "2" }}>
-            <li><a href="#" style={{ color: "#1a1a1a", textDecoration: "none", fontSize: "13px" }}>100 Night Guarantee</a></li>
-            <li><a href="#" style={{ color: "#1a1a1a", textDecoration: "none", fontSize: "13px" }}>Returns &amp; Exchanges</a></li>
-            <li><a href="#" style={{ color: "#1a1a1a", textDecoration: "none", fontSize: "13px" }}>Shipping &amp; Delivery</a></li>
-            <li><a href="#" style={{ color: "#1a1a1a", textDecoration: "none", fontSize: "13px" }}>Unbeatable Price Guarantee</a></li>
+            <li><a href="#" style={{ color: "#1a1a1a", textDecoration: "none", fontSize: "16px" }}>100 Night Guarantee</a></li>
+            <li><a href="#" style={{ color: "#1a1a1a", textDecoration: "none", fontSize: "16px" }}>Returns &amp; Exchanges</a></li>
+            <li><a href="#" style={{ color: "#1a1a1a", textDecoration: "none", fontSize: "16px" }}>Shipping &amp; Delivery</a></li>
+            <li><a href="#" style={{ color: "#1a1a1a", textDecoration: "none", fontSize: "16px" }}>Unbeatable Price Guarantee</a></li>
           </ul>
         </div>
 
         {/* All About Sleep Country */}
         <div style={{ flex: "1", minWidth: "200px", paddingRight: "20px" }}>
-          <p style={{ fontWeight: "700", fontSize: "13px", marginBottom: "14px", lineHeight: "1.4" }}>All About Sleep Country</p>
+          <p style={{ fontWeight: "700", fontSize: "18px", marginBottom: "14px", lineHeight: "1.4" }}>All About Sleep Country</p>
           <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "2" }}>
-            <li><a href="#" style={{ color: "#1a1a1a", textDecoration: "none", fontSize: "13px" }}>About Us</a></li>
-            <li><a href="#" style={{ color: "#1a1a1a", textDecoration: "none", fontSize: "13px" }}>Supplier Partners</a></li>
-            <li><a href="#" style={{ color: "#1a1a1a", textDecoration: "none", fontSize: "13px" }}>Careers</a></li>
+            <li><a href="#" style={{ color: "#1a1a1a", textDecoration: "none", fontSize: "16px" }}>About Us</a></li>
+            <li><a href="#" style={{ color: "#1a1a1a", textDecoration: "none", fontSize: "16px" }}>Supplier Partners</a></li>
+            <li><a href="#" style={{ color: "#1a1a1a", textDecoration: "none", fontSize: "16px" }}>Careers</a></li>
           </ul>
         </div>
 
         {/* Help & Info */}
         <div style={{ flex: "1", minWidth: "160px", paddingRight: "20px" }}>
-          <p style={{ fontWeight: "700", fontSize: "13px", marginBottom: "14px", lineHeight: "1.4" }}>Help &amp; Info</p>
+          <p style={{ fontWeight: "700", fontSize: "18px", marginBottom: "14px", lineHeight: "1.4" }}>Help &amp; Info</p>
           <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "2" }}>
-            <li><a href="#" style={{ color: "#1a1a1a", textDecoration: "none", fontSize: "13px" }}>Help Center/FAQ</a></li>
-            <li><a href="#" style={{ color: "#1a1a1a", textDecoration: "none", fontSize: "13px" }}>Contact Us</a></li>
-            <li><a href="#" style={{ color: "#1a1a1a", textDecoration: "none", fontSize: "13px" }}>Track My Order</a></li>
-            <li><a href="#" style={{ color: "#1a1a1a", textDecoration: "none", fontSize: "13px" }}>Find a Store</a></li>
+            <li><a href="#" style={{ color: "#1a1a1a", textDecoration: "none", fontSize: "16px" }}>Help Center/FAQ</a></li>
+            <li><a href="#" style={{ color: "#1a1a1a", textDecoration: "none", fontSize: "16px" }}>Contact Us</a></li>
+            <li><a href="#" style={{ color: "#1a1a1a", textDecoration: "none", fontSize: "16px" }}>Track My Order</a></li>
+            <li><a href="#" style={{ color: "#1a1a1a", textDecoration: "none", fontSize: "16px" }}>Find a Store</a></li>
           </ul>
         </div>
 
@@ -56,21 +56,8 @@ export function Footer() {
               </svg>
             </div>
             <div>
-              <a href="#" style={{ color: "#1a1a1a", fontSize: "13px", fontWeight: "400", textDecoration: "underline" }}>Live Chat</a>
-            </div>
-          </div>
-
-          {/* Sleep Expert */}
-          <div style={{ display: "flex", alignItems: "flex-start", marginBottom: "16px", gap: "12px" }}>
-            <div style={{ width: "24px", height: "24px", flexShrink: 0, marginTop: "1px" }}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: "22px", height: "22px" }}>
-                <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
-                <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
-              </svg>
-            </div>
-            <div>
-              <p style={{ margin: "0 0 2px", fontSize: "13px", color: "#1a1a1a" }}>Sleep Expert</p>
-              <a href="tel:18447480260" style={{ color: "#1a1a1a", fontSize: "13px", textDecoration: "underline" }}>1-844-748-0260</a>
+              <p style={{ margin: "0 0 2px", fontSize: "16px", color: "#1a1a1a" }}>Sleep Expert</p>
+              <a href="tel:18447480260" style={{ color: "#1a1a1a", fontSize: "16px", textDecoration: "underline" }}>1-844-748-0260</a>
             </div>
           </div>
 
@@ -82,9 +69,9 @@ export function Footer() {
               </svg>
             </div>
             <div>
-              <p style={{ margin: "0 0 2px", fontSize: "13px", color: "#1a1a1a" }}>Customer Service</p>
-              <a href="tel:18885337388" style={{ color: "#1a1a1a", fontSize: "13px", textDecoration: "underline", display: "block" }}>1-888-SLEEP-88</a>
-              <a href="tel:18885337388" style={{ color: "#1a1a1a", fontSize: "13px", textDecoration: "underline" }}>(1-888-753-3788)</a>
+              <p style={{ margin: "0 0 2px", fontSize: "16px", color: "#1a1a1a" }}>Customer Service</p>
+              <a href="tel:18885337388" style={{ color: "#1a1a1a", fontSize: "16px", textDecoration: "underline", display: "block" }}>1-888-SLEEP-88</a>
+              <a href="tel:18885337388" style={{ color: "#1a1a1a", fontSize: "16px", textDecoration: "underline" }}>(1-888-753-3788)</a>
             </div>
           </div>
 
