@@ -51,14 +51,14 @@ export default function RegionalReviewsReplica() {
           </aside>
         </div>
 
-        <button className="chat-button" type="button" aria-label="Chat with a Sleep Expert">
+        {/* <button className="chat-button" type="button" aria-label="Chat with a Sleep Expert">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12 4.25c-4.35 0-7.85 2.86-7.85 6.39 0 1.8.92 3.44 2.39 4.6l-.45 3.17 3.42-1.75c.79.23 1.63.36 2.49.36 4.34 0 7.85-2.86 7.85-6.38S16.34 4.25 12 4.25Zm0 1.65c3.38 0 6.12 2.12 6.12 4.74S15.38 15.38 12 15.38c-.86 0-1.68-.14-2.42-.42l-.36-.13-1.15.59.15-1.08-.45-.35c-1.18-.91-1.89-2.13-1.89-3.35C5.88 8.02 8.62 5.9 12 5.9Z" />
           </svg>
           <span>Chat with a Sleep Expert</span>
         </button>
 
-        <button className="scroll-top" type="button" aria-label="Back to top">⌃</button>
+        <button className="scroll-top" type="button" aria-label="Back to top">⌃</button> */}
       </section>
 
       <style>{`

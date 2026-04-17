@@ -237,15 +237,15 @@ export function ComparisonTable() {
       </div>
 
       {/* Floating: Chat with a Sleep Expert */}
-      <div style={{ position: "fixed", bottom: "20px", right: "64px", backgroundColor: "#1e2433", color: "white", borderRadius: "30px", padding: "12px 20px", display: "flex", alignItems: "center", gap: "10px", fontSize: "14px", fontWeight: "700", cursor: "pointer", boxShadow: "0 4px 14px rgba(0,0,0,0.3)" }}>
+      {/* <div style={{ position: "fixed", bottom: "20px", right: "64px", backgroundColor: "#1e2433", color: "white", borderRadius: "30px", padding: "12px 20px", display: "flex", alignItems: "center", gap: "10px", fontSize: "14px", fontWeight: "700", cursor: "pointer", boxShadow: "0 4px 14px rgba(0,0,0,0.3)" }}>
         <MessageCircle size={18} />
         Chat with a Sleep Expert
-      </div>
+      </div> */}
 
       {/* Floating: Scroll to top */}
-      <button style={{ position: "fixed", bottom: "20px", right: "20px", backgroundColor: "#666", color: "white", borderRadius: "50%", width: "38px", height: "38px", display: "flex", alignItems: "center", justifyContent: "center", border: "none", cursor: "pointer", boxShadow: "0 2px 8px rgba(0,0,0,0.25)" }} aria-label="Scroll to top">
+      {/* <button style={{ position: "fixed", bottom: "20px", right: "20px", backgroundColor: "#666", color: "white", borderRadius: "50%", width: "38px", height: "38px", display: "flex", alignItems: "center", justifyContent: "center", border: "none", cursor: "pointer", boxShadow: "0 2px 8px rgba(0,0,0,0.25)" }} aria-label="Scroll to top">
         <ChevronUp size={18} />
-      </button>
+      </button> */}
     </div>
   );
 }

@@ -135,7 +135,7 @@ export default function ProductDetail() {
             <p className="text-sm text-gray-600">Go ahead, ask them anything.</p>
           </div>
         </div>
-        <div className="flex gap-2 mt-4">
+        {/* <div className="flex gap-2 mt-4">
           <button className="flex-1 flex items-center justify-center gap-1.5 border border-gray-300 rounded py-2 px-3 text-sm font-medium text-gray-800 bg-white hover:bg-gray-50">
             <Phone className="w-4 h-4" /> Call an Expert
           </button>
@@ -145,7 +145,7 @@ export default function ProductDetail() {
           <button className="flex-1 flex items-center justify-center gap-1.5 border border-gray-300 rounded py-2 px-3 text-sm font-medium text-gray-800 bg-white hover:bg-gray-50">
             <Video className="w-4 h-4" /> Visit a Store
           </button>
-        </div>
+        </div> */}
       </div>
 
     </div>
