@@ -1,3 +1,5 @@
+'use client';
+
 export function Footer() {
   return (
     <div style={{ fontFamily: "'Arial', 'Helvetica Neue', Helvetica, sans-serif", fontSize: "13px", color: "#1a1a1a", backgroundColor: "#f2ede7", minWidth: "1024px" }}>

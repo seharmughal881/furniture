@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import ProductPage from './component/ProductPage';
 import ProductOverview from './component/ProductOverview';
@@ -19,6 +19,11 @@ export default function Home() {
   const [selectedThumbnail, setSelectedThumbnail] = useState(0);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [showStarPopup, setShowStarPopup] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(typeof window !== 'undefined' && window.innerWidth < 768);
+  }, []);
 
   const sizes = [
     { name: 'Twin', price: '$999' },
@@ -50,15 +55,23 @@ export default function Home() {
   };
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
-  // Handle scroll to show/hide scroll-to-top button
-  if (typeof window !== 'undefined') {
-    window.addEventListener('scroll', () => {
-      setShowScrollTop(window.scrollY > 300);
-    });
-  }
+  useEffect(() => {
+    // Handle scroll to show/hide scroll-to-top button
+    if (typeof window !== 'undefined') {
+      const handleScroll = () => {
+        setShowScrollTop(window.scrollY > 300);
+      };
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -81,8 +94,8 @@ export default function Home() {
               <div className="flex items-center" style={{ fontFamily: 'Arial, sans-serif' }}>
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
-                  width={window.innerWidth < 768 ? "20" : "24"} 
-                  height={window.innerWidth < 768 ? "20" : "24"} 
+                  width={isMobile ? "20" : "24"} 
+                  height={isMobile ? "20" : "24"} 
                   viewBox="0 0 25 25" 
                   aria-hidden="true" 
                   focusable="false"
@@ -102,8 +115,8 @@ export default function Home() {
                 </svg>
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
-                  width={window.innerWidth < 768 ? "20" : "24"} 
-                  height={window.innerWidth < 768 ? "20" : "24"} 
+                  width={isMobile ? "20" : "24"} 
+                  height={isMobile ? "20" : "24"} 
                   viewBox="0 0 25 25" 
                   aria-hidden="true" 
                   focusable="false"
@@ -123,8 +136,8 @@ export default function Home() {
                 </svg>
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
-                  width={window.innerWidth < 768 ? "20" : "24"} 
-                  height={window.innerWidth < 768 ? "20" : "24"} 
+                  width={isMobile ? "20" : "24"} 
+                  height={isMobile ? "20" : "24"} 
                   viewBox="0 0 25 25" 
                   aria-hidden="true" 
                   focusable="false"
@@ -144,8 +157,8 @@ export default function Home() {
                 </svg>
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
-                  width={window.innerWidth < 768 ? "20" : "24"} 
-                  height={window.innerWidth < 768 ? "20" : "24"} 
+                  width={isMobile ? "20" : "24"} 
+                  height={isMobile ? "20" : "24"} 
                   viewBox="0 0 25 25" 
                   aria-hidden="true" 
                   focusable="false"
@@ -165,8 +178,8 @@ export default function Home() {
                 </svg>
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
-                  width={window.innerWidth < 768 ? "20" : "24"} 
-                  height={window.innerWidth < 768 ? "20" : "24"} 
+                  width={isMobile ? "20" : "24"} 
+                  height={isMobile ? "20" : "24"} 
                   viewBox="0 0 25 25" 
                   aria-hidden="true" 
                   focusable="false"

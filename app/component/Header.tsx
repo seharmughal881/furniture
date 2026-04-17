@@ -1,19 +1,33 @@
+'use client';
+
 import { useState, useEffect } from "react";
 
 export default function SleepCountryHeader() {
   const [searchValue, setSearchValue] = useState("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
+    setIsMobile(typeof window !== 'undefined' && window.innerWidth < 768);
+    setIsSmallScreen(typeof window !== 'undefined' && window.innerWidth < 480);
+    
     const handleResize = () => {
-      if (window.innerWidth < 768 && isMobileMenuOpen) {
-        setIsMobileMenuOpen(false);
+      if (typeof window !== 'undefined') {
+        setIsMobile(window.innerWidth < 768);
+        setIsSmallScreen(window.innerWidth < 480);
+        if (window.innerWidth < 768 && isMobileMenuOpen) {
+          setIsMobileMenuOpen(false);
+        }
       }
     };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    
+    if (typeof window !== 'undefined') {
+      window.addEventListener("resize", handleResize);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
   }, [isMobileMenuOpen]);
 
   return (
@@ -33,13 +47,13 @@ export default function SleepCountryHeader() {
           flexWrap: "wrap",
         }}
       >
-        <span style={{ flex: 1, textAlign: "left", display: window.innerWidth < 768 ? "none" : "block" }}>
+        <span style={{ flex: 1, textAlign: "left", display: isMobile ? "none" : "block" }}>
           Sleep Easy with up to 20% off mattresses &amp; more!*
         </span>
         <div style={{ 
           display: "flex", 
           alignItems: "center", 
-          gap: window.innerWidth < 768 ? "12px" : "24px", 
+          gap: isMobile ? "12px" : "24px", 
           color: "#fff",
           flexWrap: "wrap"
         }}>
@@ -50,7 +64,7 @@ export default function SleepCountryHeader() {
               textDecoration: "none", 
               fontSize: "12px", 
               whiteSpace: "nowrap",
-              display: window.innerWidth < 480 ? "none" : "block"
+              display: isSmallScreen ? "none" : "block"
             }}
           >
             Have Questions?
@@ -62,7 +76,7 @@ export default function SleepCountryHeader() {
               textDecoration: "none", 
               fontSize: "12px", 
               whiteSpace: "nowrap",
-              display: window.innerWidth < 480 ? "none" : "block"
+              display: isSmallScreen ? "none" : "block"
             }}
           >
             Track My Order
