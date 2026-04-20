@@ -78,9 +78,9 @@ export default function Home() {
      
 <Header/>
       {/* Main Content */}
-      <main className="w-full bg-white">
+      <main className="w-full max-w-6xl mx-auto bg-white">
         {/* Product Section */}
-        <section className="flex flex-col lg:flex-row gap-4 lg:gap-12 relative px-3 sm:px-4 lg:px-8 xl:px-12 py-6 lg:py-12 xl:py-16">
+        <section className="flex flex-col lg:flex-row gap-2 lg:gap-12 relative px-2 sm:px-4 lg:px-8 xl:px-12 py-4 lg:py-12 xl:py-16">
           {/* Gallery Section */}
           <div className="w-full lg:w-3/5 xl:w-1/2 lg:sticky lg:top-6 lg:self-start">
                    <Gallery/>
