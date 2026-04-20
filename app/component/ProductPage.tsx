@@ -862,11 +862,279 @@ export default function ProductPage() {
 
 
 
+<div className="rounded-xl border p-4 sm:p-5 flex flex-col sm:flex-row gap-4 sm:gap-5"
+  style={{ backgroundColor: "#ffffff", borderColor: "#ddd8d0" }}
+>
+
+  {/* IMAGE */}
+  <div className="w-full sm:w-[166px] flex-shrink-0">
+    <img
+      src="https://cdn11.bigcommerce.com/s-j35z99636s/images/stencil/320w/products/737/8217/3-02050SBPB-01280-KINGSDOWN-BASE-Ecomm-01__11488.1720191448.jpg"
+      alt=""
+      className="w-full sm:w-[166px] h-auto rounded-lg object-cover"
+    />
+  </div>
+
+  {/* CONTENT */}
+  <div className="flex flex-col flex-1 min-w-0">
+
+    <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
+
+      {/* LEFT SIDE */}
+      <div className="flex-1">
+
+        <h3 className="font-semibold leading-snug mb-2 text-[15px] sm:text-[16px]"
+          style={{ color: "#1a1a1a" }}>
+          Bloom Essentials Mattress<br />Protector
+        </h3>
+
+        <div className="flex items-center gap-2 mb-3">
+          <div className="flex items-center">
+            <StarIcon filled /><StarIcon filled /><StarIcon filled />
+            <StarIcon filled /><StarIcon half />
+          </div>
+
+          <span className="text-sm flex items-center gap-1 text-gray-600">
+            (209)<ChevronDownIcon />
+          </span>
+        </div>
+
+        <div>
+          <span style={{ color: "#1a1a1a" }}>
+            <span className="text-xs align-super">$</span>
+            <span className="text-xl sm:text-2xl font-bold">119</span>
+            <span className="text-sm">.00</span>
+          </span>
+        </div>
+
+      </div>
+
+      {/* RIGHT SIDE */}
+      <div className="flex flex-col justify-between w-full lg:w-[220px]">
+
+        <div>
+          <label className="block text-sm mb-2 text-gray-600 font-medium">
+            Size:
+          </label>
+
+          <div className="relative">
+            <select
+              value={dropdownSize}
+              onChange={(e) => setDropdownSize(e.target.value)}
+              className="w-full appearance-none rounded border px-3 py-2.5 pr-8 text-sm bg-gray-50"
+            >
+              <option>Twin</option>
+              <option>Twin XL</option>
+              <option>Full</option>
+              <option>Queen</option>
+              <option>King</option>
+              <option>Cal King</option>
+            </select>
+
+            <div className="pointer-events-none absolute inset-y-0 right-2 flex items-center text-gray-500">
+              <ChevronDownIcon />
+            </div>
+          </div>
+        </div>
+
+        <button
+          className="mt-4 w-full py-3 px-4 rounded text-sm font-semibold hover:opacity-90"
+          style={{ backgroundColor: "#2d3a4f", color: "#ffffff" }}
+        >
+          Add to Cart
+        </button>
+
+      </div>
+
+    </div>
+    
+  </div>
+  
+</div>
+<br /><br />
+<div className="rounded-xl border p-4 sm:p-5 flex flex-col sm:flex-row gap-4 sm:gap-5"
+  style={{ backgroundColor: "#ffffff", borderColor: "#ddd8d0" }}
+>
+
+  {/* IMAGE */}
+  <div className="w-full sm:w-[166px] flex-shrink-0">
+    <img
+      src="https://cdn11.bigcommerce.com/s-j35z99636s/images/stencil/320w/products/737/8217/3-02050SBPB-01280-KINGSDOWN-BASE-Ecomm-01__11488.1720191448.jpg"
+      alt=""
+      className="w-full sm:w-[166px] h-auto rounded-lg object-cover"
+    />
+  </div>
+
+  {/* CONTENT */}
+  <div className="flex flex-col flex-1 min-w-0">
+
+    <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
+
+      {/* LEFT SIDE */}
+      <div className="flex-1">
+
+        <h3 className="font-semibold leading-snug mb-2 text-[15px] sm:text-[16px]"
+          style={{ color: "#1a1a1a" }}>
+          Bloom Essentials Mattress<br />Protector
+        </h3>
+
+        <div className="flex items-center gap-2 mb-3">
+          <div className="flex items-center">
+            <StarIcon filled /><StarIcon filled /><StarIcon filled />
+            <StarIcon filled /><StarIcon half />
+          </div>
+
+          <span className="text-sm flex items-center gap-1 text-gray-600">
+            (209)<ChevronDownIcon />
+          </span>
+        </div>
+
+        <div>
+          <span style={{ color: "#1a1a1a" }}>
+            <span className="text-xs align-super">$</span>
+            <span className="text-xl sm:text-2xl font-bold">119</span>
+            <span className="text-sm">.00</span>
+          </span>
+        </div>
+
+      </div>
+
+      {/* RIGHT SIDE */}
+      <div className="flex flex-col justify-between w-full lg:w-[220px]">
+
+        <div>
+          <label className="block text-sm mb-2 text-gray-600 font-medium">
+            Size:
+          </label>
+
+          <div className="relative">
+            <select
+              value={dropdownSize}
+              onChange={(e) => setDropdownSize(e.target.value)}
+              className="w-full appearance-none rounded border px-3 py-2.5 pr-8 text-sm bg-gray-50"
+            >
+              <option>Twin</option>
+              <option>Twin XL</option>
+              <option>Full</option>
+              <option>Queen</option>
+              <option>King</option>
+              <option>Cal King</option>
+            </select>
+
+            <div className="pointer-events-none absolute inset-y-0 right-2 flex items-center text-gray-500">
+              <ChevronDownIcon />
+            </div>
+          </div>
+        </div>
+
+        <button
+          className="mt-4 w-full py-3 px-4 rounded text-sm font-semibold hover:opacity-90"
+          style={{ backgroundColor: "#2d3a4f", color: "#ffffff" }}
+        >
+          Add to Cart
+        </button>
+
+      </div>
+
+    </div>
+    
+  </div>
+  
+</div>
+<br /><br />
+
+<div className="rounded-xl border p-4 sm:p-5 flex flex-col sm:flex-row gap-4 sm:gap-5"
+  style={{ backgroundColor: "#ffffff", borderColor: "#ddd8d0" }}
+>
+
+  {/* IMAGE */}
+  <div className="w-full sm:w-[166px] flex-shrink-0">
+    <img
+      src="https://cdn11.bigcommerce.com/s-j35z99636s/images/stencil/320w/products/737/8217/3-02050SBPB-01280-KINGSDOWN-BASE-Ecomm-01__11488.1720191448.jpg"
+      alt=""
+      className="w-full sm:w-[166px] h-auto rounded-lg object-cover"
+    />
+  </div>
+
+  {/* CONTENT */}
+  <div className="flex flex-col flex-1 min-w-0">
+
+    <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
+
+      {/* LEFT SIDE */}
+      <div className="flex-1">
+
+        <h3 className="font-semibold leading-snug mb-2 text-[15px] sm:text-[16px]"
+          style={{ color: "#1a1a1a" }}>
+          Bloom Essentials Mattress<br />Protector
+        </h3>
+
+        <div className="flex items-center gap-2 mb-3">
+          <div className="flex items-center">
+            <StarIcon filled /><StarIcon filled /><StarIcon filled />
+            <StarIcon filled /><StarIcon half />
+          </div>
+
+          <span className="text-sm flex items-center gap-1 text-gray-600">
+            (209)<ChevronDownIcon />
+          </span>
+        </div>
+
+        <div>
+          <span style={{ color: "#1a1a1a" }}>
+            <span className="text-xs align-super">$</span>
+            <span className="text-xl sm:text-2xl font-bold">119</span>
+            <span className="text-sm">.00</span>
+          </span>
+        </div>
+
+      </div>
+
+      {/* RIGHT SIDE */}
+      <div className="flex flex-col justify-between w-full lg:w-[220px]">
+
+        <div>
+          <label className="block text-sm mb-2 text-gray-600 font-medium">
+            Size:
+          </label>
+
+          <div className="relative">
+            <select
+              value={dropdownSize}
+              onChange={(e) => setDropdownSize(e.target.value)}
+              className="w-full appearance-none rounded border px-3 py-2.5 pr-8 text-sm bg-gray-50"
+            >
+              <option>Twin</option>
+              <option>Twin XL</option>
+              <option>Full</option>
+              <option>Queen</option>
+              <option>King</option>
+              <option>Cal King</option>
+            </select>
+
+            <div className="pointer-events-none absolute inset-y-0 right-2 flex items-center text-gray-500">
+              <ChevronDownIcon />
+            </div>
+          </div>
+        </div>
+
+        <button
+          className="mt-4 w-full py-3 px-4 rounded text-sm font-semibold hover:opacity-90"
+          style={{ backgroundColor: "#2d3a4f", color: "#ffffff" }}
+        >
+          Add to Cart
+        </button>
+
+      </div>
+
+    </div>
+    
+  </div>
+  
+</div>
 
 
-
-
-          <div className="rounded-xl border p-5 flex gap-5"
+          {/* <div className="rounded-xl border p-5 flex gap-5"
 
 
 
@@ -1490,218 +1758,7 @@ export default function ProductPage() {
 
 
 
-          </div>
-
-
-
-           {/* <div className="rounded-xl border p-5 mt-5 flex gap-5"
-
-
-
-            style={{ backgroundColor: "#ffffff", borderColor: "#ddd8d0" }}>
-
-
-
-            <img src="https://cdn11.bigcommerce.com/s-j35z99636s/images/stencil/320w/products/983/8830/9SOAIRBK-3_NEW_SOHO_AIRSCAPE_BASE_BLACKWARM_MODERN_PD_MIX_2_4_01255__45086.1721053420.jpg" alt="" className="w-166 h-auto rounded-lg object-cover" />
-
-
-
-    
-
-
-
-            <div className="flex flex-col flex-1 min-w-0">
-
-
-
-              <div className="flex flex-col sm:flex-row gap-6">
-
-
-
-                <div className="flex-1">
-
-
-
-                  <h3 className="font-semibold leading-snug mb-2"
-
-
-
-                    style={{ color: "#1a1a1a", fontSize: "16px", lineHeight: "1.3" }}>
-
-
-
-                    Bloom Essentials Mattress<br />Protector
-
-
-
-                  </h3>
-
-
-
-                  <div className="flex items-center gap-2 mb-3">
-
-
-
-                    <div className="flex items-center">
-
-
-
-                      <StarIcon filled={true} /><StarIcon filled={true} /><StarIcon filled={true} />
-
-
-
-                      <StarIcon filled={true} /><StarIcon filled={false} half={true} />
-
-
-
-                    </div>
-
-
-
-                    <span className="text-sm flex items-center gap-1" style={{ color: "#4a5568" }}>
-
-
-
-                      (209)<ChevronDownIcon />
-
-
-
-                    </span>
-
-
-
-                  </div>
-
-
-
-                  <div>
-
-
-
-                    <span style={{ color: "#1a1a1a" }}>
-
-
-
-                      <span style={{ fontSize: "13px", fontWeight: 500, verticalAlign: "super" }}>$</span>
-
-
-
-                      <span style={{ fontSize: "26px", fontWeight: 700 }}>119</span>
-
-
-
-                      <span style={{ fontSize: "14px", fontWeight: 400 }}>.00</span>
-
-
-
-                    </span>
-
-
-
-                  </div>
-
-
-
-                </div>
-
-
-
-
-
-
-
-                <div className="flex flex-col justify-between min-w-[200px]">
-
-
-
-                  <div>
-
-
-
-                    <label className="block text-sm mb-2" style={{ color: "#4a5568", fontWeight: 500 }}>Size:</label>
-
-
-
-                    <div className="relative">
-
-
-
-                      <select value={dropdownSize} onChange={(e) => setDropdownSize(e.target.value)}
-
-
-
-                        className="w-full appearance-none rounded border px-3 py-2.5 pr-8 text-sm focus:outline-none"
-
-
-
-                        style={{ borderColor: "#ccc", backgroundColor: "#f9f9f9", color: "#1a1a1a" }}>
-
-
-
-                        <option>Twin</option><option>Twin XL</option><option>Full</option>
-
-
-
-                        <option>Queen</option><option>King</option><option>Cal King</option>
-
-
-
-                      </select>
-
-
-
-                      <div className="pointer-events-none absolute inset-y-0 right-2 flex items-center" style={{ color: "#666" }}>
-
-
-
-                        <ChevronDownIcon />
-
-
-
-                      </div>
-
-
-
-                    </div>
-
-
-
-                  </div>
-
-
-
-                  <button className="mt-4 w-full py-3 px-4 rounded text-sm font-semibold transition-opacity hover:opacity-90"
-
-
-
-                    style={{ backgroundColor: "#2d3a4f", color: "#ffffff" }}>
-
-
-
-                    Add to Cart
-
-
-
-                  </button>
-
-
-
-                </div>
-
-
-
-              </div>
-
-
-
-            </div>
-
-
-
           </div> */}
-
-
-
         </div>
 
 
