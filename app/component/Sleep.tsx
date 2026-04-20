@@ -6,7 +6,7 @@ export default function SleepExpertsSection() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "#f0ede8",
+        // backgroundColor: "#f0ede8",
         fontFamily: "'Georgia', 'Times New Roman', serif",
         padding: "24px",
       }}
