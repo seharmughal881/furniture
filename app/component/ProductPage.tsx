@@ -891,7 +891,7 @@ export default function ProductPage() {
         <div className="flex items-center gap-2 mb-3">
           <div className="flex items-center">
             <StarIcon filled /><StarIcon filled /><StarIcon filled />
-            <StarIcon filled /><StarIcon half />
+            <StarIcon filled /><StarIcon filled={false} half />
           </div>
 
           <span className="text-sm flex items-center gap-1 text-gray-600">
@@ -981,7 +981,7 @@ export default function ProductPage() {
         <div className="flex items-center gap-2 mb-3">
           <div className="flex items-center">
             <StarIcon filled /><StarIcon filled /><StarIcon filled />
-            <StarIcon filled /><StarIcon half />
+            <StarIcon filled /><StarIcon filled={false} half />
           </div>
 
           <span className="text-sm flex items-center gap-1 text-gray-600">
@@ -1072,7 +1072,7 @@ export default function ProductPage() {
         <div className="flex items-center gap-2 mb-3">
           <div className="flex items-center">
             <StarIcon filled /><StarIcon filled /><StarIcon filled />
-            <StarIcon filled /><StarIcon half />
+            <StarIcon filled /><StarIcon filled={false} half />
           </div>
 
           <span className="text-sm flex items-center gap-1 text-gray-600">
