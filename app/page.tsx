@@ -80,7 +80,7 @@ export default function Home() {
       {/* Main Content */}
       <main className="w-full bg-white">
         {/* Product Section */}
-        <section className="flex flex-col lg:flex-row gap-6 lg:gap-12 relative px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+        <section className="flex flex-col lg:flex-row gap-4 lg:gap-12 relative px-3 sm:px-4 lg:px-8 xl:px-12 py-6 lg:py-12 xl:py-16">
           {/* Gallery Section */}
           <div className="w-full lg:w-3/5 xl:w-1/2 lg:sticky lg:top-6 lg:self-start">
                    <Gallery/>
@@ -89,7 +89,7 @@ export default function Home() {
           {/* Product Details Section */}
           <div className="w-full lg:w-1/2 xl:w-3/5">
             {/* Rating and Reviews */}
-            <div className="flex items-center space-x-3 mb-6 lg:mb-8">
+            <div className="flex items-center space-x-2 sm:space-x-3 mb-4 sm:mb-6 lg:mb-8">
               <div className="flex items-center" style={{ fontFamily: 'Gilroy, sans-serif' }}>
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
@@ -197,26 +197,26 @@ export default function Home() {
                   <path d="" style={{ fill: 'url(#bv_rating_summary_star_filled_2_4_46.15_02633M)' }} />
                 </svg>
               </div>
-              <span className="text-gray-600 text-sm lg:text-base font-medium" style={{ fontFamily: 'Gilroy, sans-serif' }}>(156)</span>
+              <span className="text-gray-600 text-xs sm:text-sm lg:text-base font-medium" style={{ fontFamily: 'Gilroy, sans-serif' }}>(156)</span>
             </div>
             
             {/* Product Components */}
-            <div className="space-y-6 lg:space-y-8">
+            <div className="space-y-4 sm:space-y-6 lg:space-y-8">
               <ProductPage/>
               {/* <ProductOverview/> */}
               <ProductDetail/>
             </div>
           </div>
         </section>
-        <section className="py-12 lg:py-16">
+        <section className="px-3 sm:px-4 lg:px-8 xl:px-12 py-6 sm:py-12 lg:py-16 xl:py-20">
           {/* <MattressComparison/> */}
-          <div className="mb-12 lg:mb-16">
+          <div className="mb-8 sm:mb-12 lg:mb-16">
             <ComparisonTable/>
           </div>
-          <div className="mb-12 lg:mb-16">
+          <div className="mb-8 sm:mb-12 lg:mb-16">
             <Review/>
           </div>
-          <div className="mb-12 lg:mb-16">
+          <div className="mb-8 sm:mb-12 lg:mb-16">
             <Rigional/>
           </div>
           <Footer/>
