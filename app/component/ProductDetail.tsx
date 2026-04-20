@@ -176,7 +176,7 @@ export default function ProductDetail() {
   ];
 
   return (
-    <div className="w-full bg-white min-h-screen" style={{ fontFamily: 'Gilroy, sans-serif' }}>
+    <div className=" min-h-screen" style={{ fontFamily: 'Gilroy, sans-serif' }}>
       <div className="w-full px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         {/* <h1 className="text-3xl font-bold text-gray-900 mb-6">Product Overview</h1> */}
 
